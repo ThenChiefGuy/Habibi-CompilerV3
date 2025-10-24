@@ -1,12 +1,15 @@
 import type { Config } from "tailwindcss";
 
-// Tailwind configuration for Habibi Compiler V3.  This file tells Tailwind
-// where to look for class names so unused styles can be purged in production.
+// Tailwind configuration for Habibi Compiler V3.
 export default {
   darkMode: ["class"],
+  // Explizite Pfade: nur eigene Dateien scannen, nicht node_modules
   content: [
     "./index.html",
-    "./**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./hooks/**/*.{js,ts,jsx,tsx}",
+    "./lib/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
